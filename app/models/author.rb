@@ -1,7 +1,6 @@
 class Author < ApplicationRecord
     validates :first_name, :last_name, :password, presence: true 
     validates :age, numericality: {greate_than: 18, less_than: 99}, on: :create
-
     #validates :password, confirmation: true, if: ->(author){author.password.length >= 3}
     validates :password, format: {with: /[A-Za-z0-9_]{6,15}/}
     validates :first_name, uniqueness: true
@@ -18,9 +17,9 @@ class Author < ApplicationRecord
         super || books(subject: 'No subject found') 
     end
 
-    private
-    def check_first_name
-        self.first_name.length >= 3
-    end
+    #private
+    #def check_username
+        #self.username.length >= 3
+    #end
 
 end

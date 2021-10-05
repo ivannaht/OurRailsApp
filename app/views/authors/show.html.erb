@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @author.title %>
+  <strong>First Name:</strong>
+  <%= @author.first_name %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @author.body %>
+  <strong>Last Name:</strong>
+  <%= @author.last_name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @author.username %>
+</p>
+
+<p>
+ The password is hidden
 </p>
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back------', authors_path %>
+<%= link_to 'Back', authors_path %>
