@@ -14,7 +14,7 @@ class Author < ApplicationRecord
 
     has_many :books
     def books
-        super.any? ? super : [Book.new(title: 'No book found')] 
+        super.any? ? super : [Book.new(id: 1, title: 'No book found')] 
     end
 
     #private
