@@ -9,11 +9,11 @@ class Author < ApplicationRecord
 
     has_one :additional_info
     def additional_info
-        super || build_additional_info(address: 'No address found') 
+        super || build_additional_info(address: 'No address found', phone: 'No phone found', email: 'No email found') 
     end
 
     has_many :books
-    def books
+    def book
         super || books(subject: 'No subject found') 
     end
 
