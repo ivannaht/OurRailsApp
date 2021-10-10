@@ -13,8 +13,8 @@ class Author < ApplicationRecord
     end
 
     has_many :books
-    def book
-        super || books(subject: 'No subject found') 
+    def books
+        super.any? ? super : [Book.new(title: 'No book found')] 
     end
 
     #private

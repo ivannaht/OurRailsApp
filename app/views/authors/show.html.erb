@@ -30,6 +30,32 @@
   <%= @author.additional_info.email %>
 </p>
 
+<p align="center">
+  <strong>Books:</strong>
+</p>
+  <table align="center" width="400">
+  
+  <thead>
+    <tr>
+      <th align="left">Title:</th>
+      <th align="left">Subject:</th>
+      <th align="left">Year:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @author.books.each do |book| %>
+  <tr>
+  <td><%= book.title %></td>
+  <td><%= book.subject %></td>
+  <td><%= book.year %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
 <p>
  The password is hidden
 </p>
