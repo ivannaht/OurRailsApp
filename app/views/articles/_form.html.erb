@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:"form-control", placeholder:"Title" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class:"form-control", placeholder:"Body"  %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" >
+    <%= form.submit class:"btn btn-outline-info" %>
   </div>
 <% end %>

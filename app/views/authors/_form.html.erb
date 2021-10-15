@@ -11,36 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class:"form-control" %>
   </div>
 
 <div class="field">
     <%= form.label :age %>
-    <%= form.text_field :age %>
+    <%= form.text_field :age, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :username %>
-    <%= form.text_field :username %>
+    <%= form.text_field :username, class:"form-control" %>
   </div>
 
 <div class="field">
     <%= form.label :password %>
-    <%= form.text_field :password %>
+    <%= form.text_field :password, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :password_confirmation %>
-    <%= form.text_field :password_confirmation %>
+    <%= form.text_field :password_confirmation, class:"form-control" %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-outline-info" %>
   </div>
 <% end %>

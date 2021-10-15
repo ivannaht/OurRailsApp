@@ -1,12 +1,13 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Authors</h1>
 <br>
-<%= image_tag('image01.jpg', width: 800) %>
+<%= image_tag('image01.jpg', width: 650) %>
 <br>
-<table width="800">
-  <thead>
-    <tr>
+<div class="table-responsive-sm">
+<table  class=" table table-hover align-middle" >
+  <thead class="table-light">
+    <tr vertical-align: middle>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Age</th>
@@ -14,12 +15,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
-
-
-<tbody>
+ <tbody>
     <% @authors.each do |author| %>
-    <tr>
+    <tr vertical-align: middle>
         <td><%= author.first_name %></td>
         <td><%= author.last_name %></td>
         <td><%= author.age %></td>
@@ -31,7 +29,8 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
-<%= link_to 'New Author', new_author_path %>
+<%= link_to 'New Author', new_author_path, class: "btn btn-info" %>
